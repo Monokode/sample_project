@@ -101,3 +101,38 @@
 //     scanf("%lf", &dogs); //We use %lf for double precision numbers on scanf
 
 // }
+
+// int main() //ASCII and Int Conversion
+// {
+//     char ASCII;
+//     printf("Please enter a character: ");
+//     scanf(" %c", &ASCII);
+//     printf("%c integer value is %d \n", ASCII, ASCII);
+
+//     int integer;
+//     printf("Please enter a number from 0 to 127: ");
+//     scanf("%i", &integer);
+//     printf("ASCII value of %i is %c \n", integer, integer);
+
+//     char firstChar, secondChar, resultChar;
+//     printf("Please enter first character: ");
+//     scanf(" %c", &firstChar);
+    
+//     printf("Please enter second character: ");
+//     scanf(" %c", &secondChar);
+
+//     printf("\n");
+//     resultChar = firstChar + secondChar;
+
+//     printf("%c(%d) + %c(%d) = %c(%d) ", firstChar, firstChar, secondChar, secondChar, resultChar, resultChar);
+
+// }
+
+// #include <stdbool.h>
+// int main()  //Boolean Exercise
+// {
+//     _Bool monixIsAlive = 9001;  //_Bool is used as a regular boolean where 0 is false, 1 and above is true.
+//     bool monIsAlive = true; //bool is used when stdbool is imported.
+//     printf("Is Mon still alive? %i\n", monIsAlive);
+
+// }
