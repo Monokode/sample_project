@@ -136,3 +136,85 @@
 //     printf("Is Mon still alive? %i\n", monIsAlive);
 
 // }
+
+// #include <math.h>
+// int main()  //Coding Challenge
+// {
+// /**
+// create a program that takes two doubles as inputs,
+// calculates the hypotenuse of a right triangle
+// and outputs it
+// **/
+
+// double firstAngle, secondAngle, hypotenuse;
+// printf("Please insert first angle: ");
+// scanf("%lf", &firstAngle);
+// printf("Second angle: ");
+// scanf("%lf", &secondAngle);
+
+// //hypotenuse = pow( firstAngle, 2);
+// hypotenuse = sqrt(pow(firstAngle, 2) + pow(secondAngle, 2));
+// printf("The hypotenuse is: %f", hypotenuse);
+
+// }
+
+// #include <stdbool.h>
+// int main()  //If Statement Exercise
+// {
+//      int age;
+//      printf("Please input your age: ");
+//      scanf("%i", &age);
+
+//      if (age >= 18 && age <= 100)
+//      {
+//          printf("You are allowed. Please come in.");
+//      }
+     
+//      else if (age > 0 && age < 18)
+//      {
+//          printf("Age below 18 is not allowed. Kindly leave the area. Thank you!");
+//      } 
+
+//      else 
+//      {
+//          printf("Age is invalid. Please re-run the program.");
+//      }
+// }
+
+#include <stdlib.h>
+#include <stdbool.h>
+#include <time.h>
+int main()  //Random Number Exercise
+{
+
+    int maxValue = 5;
+    srand(time(NULL));
+    system("cls");
+    START:  //label for goto statement where code can restart
+    printf("Guess the number from 0 - %i: ", maxValue);
+    int userInput;
+    scanf("%i", &userInput);
+
+    //Generate number and compare user input number
+    int randomNumber = rand() % maxValue + 1;
+    if (userInput > maxValue)
+    {
+        system("cls");
+        printf("Number out of range. Please try again.");
+        printf("\n\n");
+        goto START;
+    } 
+    else if (userInput == randomNumber)
+    {
+        system("cls");
+        printf("You won! %i is the correct number!\n", randomNumber);
+        printf("\n\n");
+    }
+    else 
+    {
+        system("cls");
+        printf("Wrong guess. Please try again. Correct number is %i", randomNumber);
+        printf("\n\n");
+        goto START;
+    }
+}
