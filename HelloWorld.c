@@ -181,40 +181,148 @@
 //      }
 // }
 
-#include <stdlib.h>
-#include <stdbool.h>
-#include <time.h>
-int main()  //Random Number Exercise
+// #include <stdlib.h>
+// #include <stdbool.h>
+// #include <time.h>
+// int main()  //Random Number Exercise
+// {
+
+//     int maxValue = 5;
+//     srand(time(NULL));
+//     system("cls");
+//     START:  //label for goto statement where code can restart
+//     printf("Guess the number from 0 - %i: ", maxValue);
+//     int userInput;
+//     scanf("%i", &userInput);
+
+//     //Generate number and compare user input number
+//     int randomNumber = rand() % maxValue + 1;
+//     if (userInput > maxValue)
+//     {
+//         system("cls");
+//         printf("Number out of range. Please try again.");
+//         printf("\n\n");
+//         goto START;
+//     } 
+//     else if (userInput == randomNumber)
+//     {
+//         system("cls");
+//         printf("You won! %i is the correct number!\n", randomNumber);
+//         printf("\n\n");
+//     }
+//     else 
+//     {
+//         system("cls");
+//         printf("Wrong guess. Please try again. Correct number is %i", randomNumber);
+//         printf("\n\n");
+//         goto START;
+//     }
+// }
+
+// int main()  //Ternary Operator Exercise
+// {
+//     double money = 20;
+//     double cost = 18;
+
+//     //Ternary Operator
+//     money > cost ? printf("Yes you can buy it ") : printf("Sorry, you need %lf more money", cost - money);
+
+//     /** //This works same as the ternary
+//     if (money > cost )
+//     {
+//         printf("Yes you can buy it ");
+//     } 
+//     else
+//     {
+//         printf("Sorry, you need %lf more money", cost - money);
+//     }
+//     */
+    
+// }
+
+/**
+ * Output Exercise
+ * 0
+ * 1 0
+ * 2 1 0
+ * 3 2 1 0
+ * 4 3 2 1 0
+ * 5 4 3 2 1 0
+*/
+
+// #include <stdlib.h>
+// int main()  //Printing Logic Exercise
+// {
+//     int max;
+//     printf("Enter maximum number from 1 to 10: ");
+//     scanf("%d", &max);
+
+//     (max >= 1 && max <= 10) ? system("cls") : exit(0);
+    
+//     int i, k;
+//     for (i = 0; i < max; i++)
+//     {
+//         for (k = i; k >= 0; k--)
+//         {
+//             printf("%i ", k);
+//         }
+//         printf("\n");
+//     }
+// }
+
+// #include <stdlib.h>
+// #include <math.h>
+// int main()  //Prime Numbers Exercise
+// {
+//     int num;
+
+//     do
+//     {
+//         printf("Please enter a number greater than 0 to check if it is a prime number: ");
+//         scanf("%i", &num);
+//     } while(num <= 0);
+
+//     // //#SAMPLE CODE on WHILE LOOP        
+//     // int comparator = num - 1;
+//     // while(comparator > 1)
+//     // {
+//     //     if(num % comparator == 0)
+//     //     {
+//     //         printf("%i is NOT a prime number", num);
+//     //         exit(0);
+//     //     }
+//     //     comparator--;
+//     // }
+
+//     // printf("%i is a PRIME NUMBER\n", num);
+
+//     //Per math logic, you can start from the square root of the input to compare
+//     //comparator = sqrt(num). Still comparator = num - 1 is doable but takes longer to process
+//     for (int comparator = sqrt(num); comparator > 1; comparator--)
+//     {
+//         if(num % comparator == 0)
+//         {
+//             printf("%i is NOT a prime number", num);
+//             exit(0);
+//         }
+//     }
+
+//     printf("%i is a PRIME NUMBER", num);
+// }
+
+
+int main() // String Exercise
 {
+    printf("What is your favorite food? ");
+    char faveFood[50];
+    scanf("%49s", faveFood);
+    printf("%s", faveFood);
 
-    int maxValue = 5;
-    srand(time(NULL));
-    system("cls");
-    START:  //label for goto statement where code can restart
-    printf("Guess the number from 0 - %i: ", maxValue);
-    int userInput;
-    scanf("%i", &userInput);
+    int charCount = 0;
+    while(faveFood[charCount] != '\0')
+    {
+        charCount++;
+    }
 
-    //Generate number and compare user input number
-    int randomNumber = rand() % maxValue + 1;
-    if (userInput > maxValue)
-    {
-        system("cls");
-        printf("Number out of range. Please try again.");
-        printf("\n\n");
-        goto START;
-    } 
-    else if (userInput == randomNumber)
-    {
-        system("cls");
-        printf("You won! %i is the correct number!\n", randomNumber);
-        printf("\n\n");
-    }
-    else 
-    {
-        system("cls");
-        printf("Wrong guess. Please try again. Correct number is %i", randomNumber);
-        printf("\n\n");
-        goto START;
-    }
+    printf("\nCharacter count is %d\n", charCount);
 }
