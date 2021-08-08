@@ -311,18 +311,119 @@
 // }
 
 
-int main() // String Exercise
-{
-    printf("What is your favorite food? ");
-    char faveFood[50];
-    scanf("%49s", faveFood);
-    printf("%s", faveFood);
+// int main() // String Exercise
+// {
+//     printf("What is your favorite food? ");
+//     char faveFood[50];
+//     scanf("%49s", faveFood);
+//     printf("%s", faveFood);
 
-    int charCount = 0;
-    while(faveFood[charCount] != '\0')
-    {
-        charCount++;
-    }
+//     int charCount = 0;
+//     while(faveFood[charCount] != '\0')
+//     {
+//         charCount++;
+//     }
 
-    printf("\nCharacter count is %d\n", charCount);
-}
+//     printf("\nCharacter count is %d\n", charCount);
+//}
+
+// int factorial(int num);
+// void outputFactorial(int input);
+// void main() //Functions Exercises
+// {
+//     outputFactorial(5);
+// }
+
+// int factorial(int num)
+// {
+//     for (int i = num - 1; i > 0; i--)
+//     {
+//         num *= i; 
+//     }
+//     return num;
+// }
+
+// void outputFactorial(int input)
+// {
+//     printf("The factorial of %d is %d.\n", input, factorial(input));
+// }
+
+
+// void main() //Pointers Exercises
+// {
+//     int slices = 20;
+//     int *p = &slices;
+
+//     printf("Slices: %d\n", slices);
+//     printf("Slices (through pointer): %d\n", *p);
+
+//     slices = 21;
+
+//     printf("Slices: %d\n", slices);
+//     printf("Slices (through pointer): %d\n", *p);
+
+//     *p = 25;
+
+//     printf("Slices: %d\n", slices);
+//     printf("Slices (through pointer): %d\n", *p);
+// }
+
+
+// //Struct Exercises
+// //Follow 2 different struct format. First format is recommended
+// typedef struct
+// {
+//     int length;
+//     int width;
+// } rectangle;
+
+// struct shape
+// {
+//     int length;
+//     int width;
+// };
+
+// typedef struct
+// {
+//     int x;
+//     int y;
+// } position;
+
+// //You can add up a lot of structs inside of another struct
+// typedef struct
+// {
+//     char owner[30];
+//     rectangle rectangle;
+//     position position;
+// } buildingPlan;
+
+
+// int main()
+// {
+
+//     rectangle myRectangle = {5, 10};
+//     printf("Length: %d. Width: %d\n", myRectangle.length, myRectangle.width);
+
+//     struct shape myShape = {5, 10};
+//     printf("Length: %d. Width: %d\n", myRectangle.length, myRectangle.width);
+
+//     buildingPlan myHouse = {"Monixxx", {5, 10}, {32, 48}};
+//     printf("The house at %d %d (size %d %d) is owned by %s\n",
+//             myHouse.position.x,
+//             myHouse.position.y,
+//             myHouse.rectangle.length,
+//             myHouse.rectangle.width,
+//             myHouse.owner
+//     );
+
+//     int size = 4;
+//     position path[] = {{0,1}, {1,2}, {2,3}, {3,4}};
+
+//     for (int i = 0; i < size; i++)
+//     {
+//         printf("Array path[%d]: %d %d\n", i, path[i].x, path[i].y);
+//     }
+    
+//     buildingPlan *structPointer = &myHouse;
+//     printf("Pointer print: %s\n", structPointer->owner);
+// }
